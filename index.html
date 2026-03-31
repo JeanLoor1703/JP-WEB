@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Elevate Studio | Diseño Web y Posicionamiento SEO en Ecuador</title>
+    <meta name="description"
+        content="Líderes en diseño de páginas web, desarrollo web y posicionamiento SEO en Ecuador (Quito, Guayaquil, Ambato). Creamos ecosistemas corporativos.">
+    <meta name="keywords"
+        content="diseño de páginas web Ecuador, posicionamiento SEO Ecuador, desarrollo web Ecuador, páginas web profesionales Ecuador, servicios de diseño web Ecuador, creación de páginas web Ecuador, diseño web Quito, posicionamiento SEO Quito, servicios SEO Ecuador">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="tailwind.config.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-sapphire">
+
+    <!-- ============================================ -->
+    <!--                   HEADER                     -->
+    <!-- ============================================ -->
+    <header id="header"
+        class="fixed w-full top-0 z-50 bg-sapphire/90 backdrop-blur-xl border-b border-gold/10 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- Logo Image -->
+                <img src="imagenes/logo-Web.png" alt="JP Elevate Studio"
+                    class="h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 invert brightness-0 drop-shadow-lg">
+                <!-- Texto al lado -->
+                <div class="flex flex-col justify-center">
+                    <span
+                        class="text-white font-montserrat font-extrabold text-[1.1rem] lg:text-xl tracking-wide leading-none mb-1">
+                        JP Elevate
+                    </span>
+                    <span
+                        class="text-gold font-montserrat font-bold text-[0.65rem] lg:text-[0.75rem] tracking-[0.2em] uppercase leading-none">
+                        Studio
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#manifiesto"
+                    class="text-white/70 hover:text-gold transition-colors text-sm font-medium">Servicios</a>
+                <a href="#portafolio"
+                    class="text-white/70 hover:text-gold transition-colors text-sm font-medium">Portafolio</a>
+                <a href="#casos" class="text-white/70 hover:text-gold transition-colors text-sm font-medium">Casos de
+                    Éxito</a>
+                <a href="#planes" class="text-white/70 hover:text-gold transition-colors text-sm font-medium">Planes</a>
+                <a href="#faq" class="text-white/70 hover:text-gold transition-colors text-sm font-medium">FAQ</a>
+            </nav>
+
+            <!-- CTA -->
+            <a href="https://wa.me/593XXXXXXXXX" target="_blank"
+                class="hidden lg:flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-[#128C7E] transition-all transform hover:scale-105 shadow-lg">
+                <i class="fab fa-whatsapp text-lg"></i>
+                Cotizar por WhatsApp
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-sapphire/98 backdrop-blur-xl border-t border-gold/10">
+            <div class="px-6 py-6 space-y-4">
+                <a href="#manifiesto" class="block text-white/80 hover:text-gold font-medium py-2">Servicios</a>
+                <a href="#portafolio" class="block text-white/80 hover:text-gold font-medium py-2">Portafolio</a>
+                <a href="#casos" class="block text-white/80 hover:text-gold font-medium py-2">Casos de Éxito</a>
+                <a href="#planes" class="block text-white/80 hover:text-gold font-medium py-2">Planes</a>
+                <a href="#faq" class="block text-white/80 hover:text-gold font-medium py-2">FAQ</a>
+                <a href="https://wa.me/593XXXXXXXXX"
+                    class="flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-xl font-semibold mt-4">
+                    <i class="fab fa-whatsapp text-lg"></i>Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!--               HERO SECTION                   -->
+    <!-- ============================================ -->
+    <section id="hero" class="min-h-screen pt-20 flex flex-col lg:flex-row relative">
+        <!-- Left: Content -->
+        <div
+            class="w-full lg:w-1/2 bg-sapphire flex items-center px-6 sm:px-10 lg:px-16 py-16 lg:py-0 relative overflow-hidden">
+            <!-- BG Blurs -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 right-10 w-80 h-80 bg-blue-900/30 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="relative z-10 max-w-xl">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/5 mb-8">
+                    <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+                    <span class="text-gold text-xs font-semibold tracking-widest uppercase">Agencia Digital
+                        Premium</span>
+                </div>
+
+                <h1
+                    class="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold text-white leading-[1.1] mb-6">
+                    Líderes en diseño web Quito<br>
+                    <span class="text-gradient-gold">y desarrollo web Quito con enfoque en conversión.</span>
+                </h1>
+
+                <p class="text-gray-400 text-base sm:text-lg mb-10 leading-relaxed max-w-md">
+                    Expertos en la creación de páginas web Ecuador con estándares internacionales. Entregas premium
+                    enfocadas en escalabilidad y SEO local.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/593XXXXXXXXX"
+                        class="inline-flex items-center justify-center gap-2 bg-gradient-gold bg-gradient-gold-hover text-sapphire px-8 py-4 rounded-full font-bold text-sm shadow-gold hover:shadow-gold-lg transition-all transform hover:scale-105">
+                        Iniciar mi lanzamiento
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#portafolio"
+                        class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-white hover:text-sapphire transition-all">
+                        <i class="fas fa-play text-xs"></i>
+                        Ver Portafolio
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Device Mockups -->
+        <div
+            class="w-full lg:w-1/2 bg-gradient-to-br from-[#0f172a] to-[#020617] flex items-center justify-center px-6 lg:px-12 py-16 lg:py-0 relative overflow-hidden">
+            <!-- Badge -->
+            <div class="absolute top-6 right-6 lg:top-16 lg:right-10 z-20 floating-badge">
+                <div
+                    class="w-24 h-24 lg:w-28 lg:h-28 bg-gradient-gold rounded-full flex flex-col items-center justify-center shadow-gold-lg border-4 border-white">
+                    <span class="text-sapphire font-extrabold text-xl lg:text-2xl leading-none">100%</span>
+                    <span
+                        class="text-sapphire text-[10px] font-bold text-center leading-tight mt-0.5">SEO<br>Ready</span>
+                </div>
+            </div>
+
+            <!-- Devices -->
+            <div class="relative flex items-end justify-center gap-3 sm:gap-5 max-w-2xl w-full">
+                <!-- Laptop -->
+                <div class="device-shadow floating-badge floating-delay-1 relative z-10 flex-1 max-w-md">
+                    <div class="bg-sapphire rounded-t-2xl p-2 sm:p-3">
+                        <div class="flex gap-1.5 mb-2 px-1">
+                            <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                        </div>
+                        <div
+                            class="aspect-video bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center relative">
+                            <span class="absolute text-gray-500 font-bold text-sm tracking-widest uppercase z-0">Laptop
+                                Preview</span>
+                            <!-- Replace src below with assets/your-laptop-screenshot.png -->
+                            <img id="laptop-preview" src="imagenes/paginas-web-Quito.jpg"
+                                alt="Diseño de páginas web Ecuador - Proyecto Corporativo"
+                                class="w-full h-full object-cover relative z-10">
+                        </div>
+                    </div>
+                    <div class="h-3 bg-gray-300 rounded-b-xl mx-6"></div>
+                    <div class="h-1.5 bg-gray-400 rounded-b-lg mx-16"></div>
+                </div>
+
+                <!-- Tablet + Mobile -->
+                <div class="flex flex-col gap-3 sm:gap-4 pb-4">
+                    <div class="device-shadow floating-badge floating-delay-2 w-20 sm:w-28 lg:w-32">
+                        <div class="bg-sapphire rounded-2xl p-1.5 sm:p-2 border border-gray-700">
+                            <div
+                                class="aspect-[3/4] bg-gray-200 rounded-xl overflow-hidden flex items-center justify-center relative">
+                                <span
+                                    class="absolute text-gray-400 font-bold text-[10px] tracking-widest uppercase z-0 rotate-90 sm:rotate-0">Tablet<br
+                                        class="hidden sm:block">Preview</span>
+                                <!-- Replace src below with assets/your-tablet-screenshot.png -->
+                                <img id="tablet-preview" src="imagenes/diseño-web-ecuador.jpg"
+                                    alt="Posicionamiento SEO Ecuador - Vista Tablet"
+                                    class="w-full h-full object-cover relative z-10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="device-shadow floating-badge floating-delay-3 w-14 sm:w-18 lg:w-20 ml-auto">
+                        <div class="bg-sapphire rounded-2xl p-1 border border-gray-700 relative">
+                            <div
+                                class="aspect-[9/16] bg-gray-200 rounded-xl overflow-hidden flex items-center justify-center relative">
+                                <span
+                                    class="absolute text-gray-400 font-bold text-[8px] tracking-widest uppercase z-0 rotate-90 sm:rotate-0 text-center">Mobile<br
+                                        class="hidden sm:block">Preview</span>
+                                <!-- Replace src below with assets/your-mobile-screenshot.png -->
+                                <img id="mobile-preview" src="imagenes/desarrollo-web-ecuador.jpg"
+                                    alt="Desarrollo web Ecuador - Vista Móvil"
+                                    class="w-full h-full object-cover relative z-10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            MANIFIESTO / DIGITAL MASTERY      -->
+    <!-- ============================================ -->
+    <section id="manifiesto" class="py-24 lg:py-36 bg-sapphire relative">
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-3xl">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-4 block">Nuestra
+                    Filosofía</span>
+                <h2 class="text-4xl lg:text-6xl font-extrabold text-white mb-6">Digital Mastery</h2>
+                <div class="glow-line w-32 mx-auto mb-8"></div>
+                <p class="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
+                    Ofrecemos páginas web profesionales Ecuador para negocios que buscan escalar. Mediante
+                    posicionamiento GEO y arquitectura técnica global, hacemos que tu marca emerja en un mundo saturado.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gold/5 border border-gold/20 flex items-center justify-center group-hover:bg-gold/15 group-hover:border-gold/40 transition-all duration-300">
+                        <i class="fas fa-bolt text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Velocidad Real</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Optimización extrema de carga para maximizar
+                        conversiones y experiencia de usuario en cada dispositivo.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gold/5 border border-gold/20 flex items-center justify-center group-hover:bg-gold/15 group-hover:border-gold/40 transition-all duration-300">
+                        <i class="fas fa-tablet-screen-button text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Adaptabilidad Total</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Diseño responsive que se adapta perfectamente a
+                        cualquier dispositivo, resolución y contexto de uso.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gold/5 border border-gold/20 flex items-center justify-center group-hover:bg-gold/15 group-hover:border-gold/40 transition-all duration-300">
+                        <i class="fas fa-network-wired text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">SEO/GEO Avanzado</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Posicionamiento neuronal preparado para motores de
+                        búsqueda e inteligencias artificiales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--          PORTFOLIO INTERACTIVO               -->
+    <!-- ============================================ -->
+    <!-- SECCIÓN REEMPLAZADA POR DOMINIO SEO & VISIBILIDAD -->
+    <section id="portafolio" class="py-24 lg:py-36 bg-cream relative" title="servicios SEO Ecuador">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <!-- Inyección SEO en atributos title -->
+                <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-4 block"
+                    title="servicios de diseño web Ecuador">
+                    Dominio SEO & Visibilidad
+                </span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-sapphire mb-4"
+                    title="diseño de páginas web Ecuador">
+                    Dominio Digital: SEO que Escala Negocios
+                </h2>
+                <div class="w-24 h-1 bg-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg" title="posicionamiento SEO Ecuador">
+                    No solo diseñamos páginas web profesionales en Ecuador, las posicionamos donde tus clientes están
+                    buscando. Mira cómo transformamos la visibilidad de nuestros aliados.
+                </p>
+            </div>
+
+            <!-- Nuevo Grid 2 Tarjetas de Video -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+                <!-- Tarjeta de Video 1 -->
+                <div class="rounded-[2rem] shadow-2xl group bg-sapphire/80 border border-white/5 overflow-hidden flex flex-col transition-transform hover:-translate-y-2 relative"
+                    title="desarrollo web Ecuador">
+                    <!-- Contenedor del Video -->
+                    <div class="aspect-video relative overflow-hidden bg-[#0a0f1d]">
+                        <video src="videos/caso-de-exito-seo-web-Ecuador.mp4" autoplay muted loop playsinline
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none"></video>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-sapphire via-transparent to-transparent opacity-50 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="absolute top-5 left-5 z-10">
+                            <span
+                                class="inline-block px-4 py-1.5 font-bold bg-gold text-sapphire rounded-full text-[10px] uppercase tracking-[0.2em] shadow-[0_4px_15px_rgba(255,215,0,0.3)]">ESTRATEGIA
+                                SEO</span>
+                        </div>
+                    </div>
+
+                    <!-- Contenedor de Texto -->
+                    <div
+                        class="p-8 lg:p-10 flex-grow flex flex-col relative z-10 -mt-2 bg-gradient-to-b from-sapphire to-[#0a0f1d] rounded-t-3xl">
+                        <h3
+                            class="text-white text-2xl lg:text-3xl font-extrabold mb-4 group-hover:text-gold transition-colors leading-tight">
+                            Posicionamiento Orgánico de Alto
+                            Nivel</h3>
+                        <p class="text-gray-400 text-sm lg:text-base leading-relaxed" title="servicios SEO Ecuador">
+                            Implementamos arquitectura técnica avanzada para que tu empresa domine los motores de
+                            búsqueda. Podemos replicar este éxito en tu sector para que tu marca trabaje por ti
+                            24/7.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Video 2 -->
+                <div class="rounded-[2rem] shadow-2xl group bg-sapphire/80 border border-white/5 overflow-hidden flex flex-col transition-transform hover:-translate-y-2 relative"
+                    title="creación de páginas web Ecuador">
+                    <!-- Contenedor del Video -->
+                    <div class="aspect-video relative overflow-hidden bg-[#0a0f1d]">
+                        <video src="videos/video-caso-deexito-paginas-we-ecuador.mp4" autoplay muted loop playsinline
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none"></video>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-sapphire via-transparent to-transparent opacity-50 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="absolute top-5 left-5 z-10">
+                            <span
+                                class="inline-block px-4 py-1.5 font-bold bg-gold text-sapphire rounded-full text-[10px] uppercase tracking-[0.2em] shadow-[0_4px_15px_rgba(255,215,0,0.3)]">VISIBILIDAD
+                                REAL</span>
+                        </div>
+                    </div>
+
+                    <!-- Contenedor de Texto -->
+                    <div
+                        class="p-8 lg:p-10 flex-grow flex flex-col relative z-10 -mt-2 bg-gradient-to-b from-sapphire to-[#0a0f1d] rounded-t-3xl">
+                        <h3
+                            class="text-white text-2xl lg:text-3xl font-extrabold mb-4 group-hover:text-gold transition-colors leading-tight">
+                            Estructuras Web que Convierten
+                            Clientes</h3>
+                        <p class="text-gray-400 text-sm lg:text-base leading-relaxed"
+                            title="posicionamiento SEO Ecuador">
+                            Optimizamos cada detalle de la creación de tu página web para garantizar carga rápida y
+                            autoridad. Lo que ves aquí es el estándar de calidad que aplicaremos a tu proyecto
+                            corporativo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+        onclick="closeLightbox(event)">
+        <button onclick="closeLightbox(event)"
+            class="absolute top-6 right-6 text-white text-3xl hover:text-gold transition-colors z-10">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lightbox-content w-full max-w-4xl" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Proyecto"
+                class="max-w-full max-h-[90vh] object-contain mx-auto rounded-2xl shadow-2xl">
+            <div class="mt-4 text-center">
+                <h3 id="lightbox-title" class="text-white text-2xl font-bold"></h3>
+                <p id="lightbox-desc" class="text-gray-400 mt-2"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--         CASOS DE ÉXITO (VIDEO AUTOPLAY)      -->
+    <!-- ============================================ -->
+    <section id="casos" class="py-24 lg:py-36 bg-sapphire relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-4 block">
+                    Resultados Reales
+                </span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-4">Casos de Éxito</h2>
+                <div class="glow-line w-32 mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-xl mx-auto">
+                    Cada proyecto demuestra la calidad de nuestra creación de páginas web Ecuador con estándares
+                    internacionales.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+                <!-- Case 1 -->
+                <div class="video-card aspect-video rounded-2xl shadow-2xl group">
+                    <video src="videos/casodeexito-Web-Cuenca.mp4" autoplay muted loop playsinline
+                        class="absolute inset-0 w-full h-full object-cover rounded-2xl pointer-events-none"></video>
+
+                    <div class="video-overlay rounded-2xl pointer-events-none">
+                        <!-- Tag -->
+                        <div class="mb-auto pt-4">
+                            <span class="tag-pill">Guayaquil / Quito</span>
+                        </div>
+
+                        <!-- Info -->
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">Ecosistemas Corporativos de Alto Impacto</h3>
+                            <p class="text-gold text-sm font-semibold mb-2">Construcción Web Premium</p>
+                            <p
+                                class="text-gray-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity">
+                                Arquitectura moderna y fluida diseñada para empresas líderes en Guayaquil y Quito.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="video-card aspect-video rounded-2xl shadow-2xl group">
+                    <video src="videos/Vide-pagina-web-Manta.mp4" autoplay muted loop playsinline
+                        class="absolute inset-0 w-full h-full object-cover rounded-2xl pointer-events-none"></video>
+
+                    <div class="video-overlay rounded-2xl pointer-events-none">
+                        <!-- Tag -->
+                        <div class="mb-auto pt-4">
+                            <span class="tag-pill">Ambato / Nacional</span>
+                        </div>
+
+                        <!-- Info -->
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">Experiencias Digitales de Próxima Generación
+                            </h3>
+                            <p class="text-gold text-sm font-semibold mb-2">Diseño y Desarrollo Web</p>
+                            <p
+                                class="text-gray-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity">
+                                Interfaces intuitivas y diseño responsive que elevan marcas en Ambato y todo el Ecuador.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3: Publicidad -->
+                <div
+                    class="video-card aspect-video w-full max-w-2xl mx-auto md:col-span-2 rounded-2xl shadow-2xl group">
+                    <video src="videos/video-web-Guayaquil.mp4" autoplay muted loop playsinline
+                        class="absolute inset-0 w-full h-full object-cover rounded-2xl pointer-events-none"></video>
+
+                    <div class="video-overlay rounded-2xl pointer-events-none">
+                        <!-- Tag -->
+                        <div class="mb-auto pt-4">
+                            <span class="tag-pill">PROYECTOS ELITE</span>
+                        </div>
+
+                        <!-- Info -->
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">Soluciones Digitales a Medida</h3>
+                            <p class="text-gold text-sm font-semibold mb-2">Innovación y tecnología de vanguardia para
+                                emprendedores en Guayaquil, Quito y Ambato</p>
+                            <p
+                                class="text-gray-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity">
+                                Servicios de Diseño Web Ecuador y Desarrollo Web Ecuador. Estructuras preparadas para el
+                                crecimiento empresarial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            PLANES DE LANZAMIENTO             -->
+    <!-- ============================================ -->
+    <section id="planes" class="py-24 lg:py-36 bg-sapphire-light relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-4 block">Inversión
+                    Inteligente</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-4">Planes de Lanzamiento</h2>
+                <p class="text-gray-400">Mercado Ecuador / LatAm</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
+
+                <!-- Start -->
+                <div
+                    class="bg-sapphire/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-gold/30 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Start</h3>
+                        <div class="flex items-baseline justify-center gap-1">
+                            <span class="text-gold text-4xl font-extrabold">$200</span>
+                            <span class="text-gray-500 text-sm">USD</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Landing Page Profesional</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Optimización SEO On-Page</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Dominio .com GRATIS (1 año)</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Certificado SSL Incluido</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Diseño Responsive</li>
+                    </ul>
+                    <a href="https://wa.me/593XXXXXXXXX"
+                        class="block w-full py-3 rounded-full border border-gold text-gold font-semibold text-center hover:bg-gold hover:text-sapphire transition-all text-sm">
+                        Seleccionar Plan
+                    </a>
+                </div>
+
+                <!-- Pro (Destacado) -->
+                <div
+                    class="bg-sapphire/80 backdrop-blur-md border-2 border-gold rounded-2xl p-8 relative transform md:-translate-y-6 shadow-gold-lg">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span
+                            class="bg-gradient-gold text-sapphire px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-gold">★
+                            Recomendado</span>
+                    </div>
+                    <div class="text-center mb-8 mt-2">
+                        <h3 class="text-2xl font-bold text-white mb-2">Pro</h3>
+                        <div class="flex items-baseline justify-center gap-1">
+                            <span class="text-gold text-5xl font-extrabold">$350</span>
+                            <span class="text-gray-500 text-sm">USD</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-white text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Web Multipage (hasta 5 páginas)</li>
+                        <li class="flex items-start gap-3 text-white text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Posicionamiento GEO (IA Ready)</li>
+                        <li class="flex items-start gap-3 text-white text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Dominio .com GRATIS (1 año)</li>
+                        <li class="flex items-start gap-3 text-white text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Blog + Sistema CMS</li>
+                        <li class="flex items-start gap-3 text-white text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Google Analytics Avanzado</li>
+                        <li class="flex items-start gap-3 text-white text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Soporte Post-Lanzamiento</li>
+                    </ul>
+                    <a href="https://wa.me/593XXXXXXXXX"
+                        class="block w-full py-3.5 rounded-full bg-gradient-gold text-sapphire font-bold text-center hover:shadow-gold-xl transition-all transform hover:scale-105 text-sm">
+                        Seleccionar Plan
+                    </a>
+                </div>
+
+                <!-- Elite -->
+                <div
+                    class="bg-sapphire/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-gold/30 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Elite</h3>
+                        <div class="flex items-baseline justify-center gap-1">
+                            <span class="text-gold text-4xl font-extrabold">$450</span>
+                            <span class="text-gray-500 text-sm">USD</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Pack 360 Completo</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Google Maps Optimizado</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Activos de IA Integrados</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Dominio .com GRATIS (1 año)</li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm"><i
+                                class="fas fa-check text-gold mt-0.5"></i>Soporte Prioritario 24/7</li>
+                    </ul>
+                    <a href="https://wa.me/593XXXXXXXXX"
+                        class="block w-full py-3 rounded-full border border-gold text-gold font-semibold text-center hover:bg-gold hover:text-sapphire transition-all text-sm">
+                        Seleccionar Plan
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                    FAQ                       -->
+    <!-- ============================================ -->
+    <section id="faq" class="py-24 lg:py-36 bg-cream">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-16">
+                <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-4 block">Respuestas</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-sapphire mb-4">Preguntas Frecuentes</h2>
+                <div class="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button
+                        class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
+                        <span class="font-bold text-sapphire pr-4">¿Qué es el GEO?</span>
+                        <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                            El GEO (Generative Engine Optimization) es la optimización para motores de IA generativa
+                            como ChatGPT, Gemini y Claude. Preparamos tu marca para ser referenciada y recomendada por
+                            inteligencias artificiales mediante estructura de datos semántica, autoridad de dominio y
+                            arquitectura de contenido optimizada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button
+                        class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
+                        <span class="font-bold text-sapphire pr-4">¿Por qué 10 días?</span>
+                        <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                            Utilizamos una metodología ágil y eficiente combinada con tecnología de punta. Nuestro
+                            proceso elimina tiempos muertos y burocracia innecesaria, permitiéndonos entregar proyectos
+                            de alta calidad en tiempo récord sin comprometer la excelencia ni los estándares
+                            profesionales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button
+                        class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
+                        <span class="font-bold text-sapphire pr-4">¿Dominio gratis?</span>
+                        <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                            Sí, todos nuestros planes incluyen un dominio .com gratis por el primer año como beneficio
+                            exclusivo de lanzamiento. Pasado el año, la renovación tiene un costo estándar de mercado
+                            (aproximadamente $12-15 USD anuales). Te acompañamos en todo el proceso.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <button
+                        class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
+                        <span class="font-bold text-sapphire pr-4">¿Incluye hosting?</span>
+                        <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                            Te asesoramos en la selección del hosting más adecuado para tu proyecto y te ayudamos con la
+                            configuración completa. Trabajamos con proveedores de alta velocidad y seguridad para
+                            garantizar el rendimiento óptimo de tu sitio web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   FOOTER                     -->
+    <!-- ============================================ -->
+    <footer class="bg-[#0a0f1d] text-white py-8 border-t border-gold/10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-6 items-center">
+                <!-- Logo -->
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <a href="#" class="flex items-center gap-3 mb-3 group">
+                        <img src="imagenes/logo-Web.png" alt="JP Elevate Studio"
+                            class="h-12 md:h-16 w-auto object-contain invert brightness-0 drop-shadow-lg transition-transform group-hover:scale-105">
+                        <div class="flex flex-col text-left">
+                            <span
+                                class="text-white font-montserrat font-extrabold text-[1.1rem] lg:text-xl tracking-wide leading-none mb-1">
+                                JP Elevate
+                            </span>
+                            <span
+                                class="text-gold font-montserrat font-bold text-[0.65rem] lg:text-[0.75rem] tracking-[0.2em] uppercase leading-none">
+                                Studio
+                            </span>
+                        </div>
+                    </a>
+                    <p class="text-gray-500 text-xs max-w-xs">Construimos presencia digital que genera resultados
+                        reales.</p>
+                </div>
+
+                <!-- Social -->
+                <div class="flex gap-3 justify-center">
+                    <a href="https://wa.me/593XXXXXXXXX" target="_blank"
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#25D366] hover:border-[#25D366] transition-all">
+                        <i class="fab fa-whatsapp text-sm"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 hover:border-pink-500 transition-all">
+                        <i class="fab fa-instagram text-sm"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all">
+                        <i class="fab fa-tiktok text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Location -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-500 text-xs mb-1">Ubicación</p>
+                    <p class="text-gold font-semibold text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i>Guayas, Ecuador
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/5 mt-6 pt-6 text-center text-gray-600 text-[10px] uppercase tracking-wider">
+                <p>&copy; 2026 JP Elevate Studio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!--       FLOATING WHATSAPP (MOBILE ONLY)        -->
+    <!-- ============================================ -->
+    <a href="https://wa.me/593XXXXXXXXX" target="_blank"
+        class="lg:hidden fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- ============================================ -->
+    <!--               JAVASCRIPT                     -->
+    <!-- ============================================ -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
