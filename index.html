@@ -193,9 +193,8 @@
                             <!-- Viewport -->
                             <div class="dsc-viewport dsc-viewport--desktop">
                                 <img src="imagenes/paginas-web-Quito.jpg"
-                                     alt="Vista de escritorio — Diseño web corporativo Ecuador"
-                                     class="dsc-img"
-                                     loading="eager">
+                                    alt="Vista de escritorio — Diseño web corporativo Ecuador" class="dsc-img"
+                                    loading="eager">
                                 <div class="dsc-glare"></div>
                             </div>
                             <!-- Laptop stand -->
@@ -213,9 +212,8 @@
                                 <div class="dsc-tablet-cam"></div>
                                 <div class="dsc-viewport dsc-viewport--tablet">
                                     <img src="imagenes/diseño-web-ecuador.jpg"
-                                         alt="Vista tablet — Diseño web responsivo Ecuador"
-                                         class="dsc-img"
-                                         loading="eager">
+                                        alt="Vista tablet — Diseño web responsivo Ecuador" class="dsc-img"
+                                        loading="eager">
                                     <div class="dsc-glare"></div>
                                 </div>
                                 <div class="dsc-tablet-home"></div>
@@ -230,9 +228,7 @@
                                 <div class="dsc-phone-island"></div>
                                 <div class="dsc-viewport dsc-viewport--phone">
                                     <img src="imagenes/desarrollo-web-ecuador.jpg"
-                                         alt="Vista móvil — Desarrollo web Ecuador"
-                                         class="dsc-img"
-                                         loading="eager">
+                                        alt="Vista móvil — Desarrollo web Ecuador" class="dsc-img" loading="eager">
                                     <div class="dsc-glare"></div>
                                 </div>
                                 <div class="dsc-phone-bar"></div>
@@ -250,12 +246,12 @@
 
                 <!-- Navigation dots -->
                 <div class="dsc-nav" id="dsc-nav" role="tablist" aria-label="Seleccionar dispositivo">
-                    <button class="dsc-nav-dot dsc-nav-dot--active" data-index="0"
-                            role="tab" aria-selected="true" aria-label="Vista de Escritorio"></button>
-                    <button class="dsc-nav-dot" data-index="1"
-                            role="tab" aria-selected="false" aria-label="Vista Tablet"></button>
-                    <button class="dsc-nav-dot" data-index="2"
-                            role="tab" aria-selected="false" aria-label="Vista Móvil"></button>
+                    <button class="dsc-nav-dot dsc-nav-dot--active" data-index="0" role="tab" aria-selected="true"
+                        aria-label="Vista de Escritorio"></button>
+                    <button class="dsc-nav-dot" data-index="1" role="tab" aria-selected="false"
+                        aria-label="Vista Tablet"></button>
+                    <button class="dsc-nav-dot" data-index="2" role="tab" aria-selected="false"
+                        aria-label="Vista Móvil"></button>
                 </div>
 
             </div><!-- /.hero-visual -->
@@ -815,110 +811,110 @@
     <!--       DEVICE SHOWCASE — AUTO CYCLE JS        -->
     <!-- ============================================ -->
     <script>
-    (function () {
-        'use strict';
+        (function () {
+            'use strict';
 
-        /* ── Config ── */
-        const INTERVAL   = 5000;   // ms between switches
-        const EXIT_DUR   = 450;    // ms — matches CSS transition duration
-        const LABELS     = ['Vista de Escritorio', 'Vista Tablet', 'Vista Móvil'];
+            /* ── Config ── */
+            const INTERVAL = 5000;   // ms between switches
+            const EXIT_DUR = 450;    // ms — matches CSS transition duration
+            const LABELS = ['Vista de Escritorio', 'Vista Tablet', 'Vista Móvil'];
 
-        /* ── DOM refs ── */
-        const slides    = document.querySelectorAll('.dsc-slide');
-        const navDots   = document.querySelectorAll('.dsc-nav-dot');
-        const labelEl   = document.getElementById('dsc-label-text');
+            /* ── DOM refs ── */
+            const slides = document.querySelectorAll('.dsc-slide');
+            const navDots = document.querySelectorAll('.dsc-nav-dot');
+            const labelEl = document.getElementById('dsc-label-text');
 
-        if (!slides.length || !navDots.length) return; // guard
+            if (!slides.length || !navDots.length) return; // guard
 
-        let current  = 0;
-        let timer    = null;
-        let paused   = false;
+            let current = 0;
+            let timer = null;
+            let paused = false;
 
-        /* ── Core: go to slide index ── */
-        function goTo(next) {
-            if (next === current) return;
-            const prev = current;
-            current = next;
+            /* ── Core: go to slide index ── */
+            function goTo(next) {
+                if (next === current) return;
+                const prev = current;
+                current = next;
 
-            /* 1. Exit old slide */
-            slides[prev].classList.remove('dsc-active');
-            slides[prev].classList.add('dsc-leaving');
+                /* 1. Exit old slide */
+                slides[prev].classList.remove('dsc-active');
+                slides[prev].classList.add('dsc-leaving');
 
-            /* 2. Clean up leaving class after animation */
-            setTimeout(function () {
-                slides[prev].classList.remove('dsc-leaving');
-            }, EXIT_DUR);
-
-            /* 3. Enter new slide */
-            slides[next].classList.add('dsc-active');
-
-            /* 4. Update label */
-            if (labelEl) {
-                labelEl.style.opacity = '0';
+                /* 2. Clean up leaving class after animation */
                 setTimeout(function () {
-                    labelEl.textContent = LABELS[next];
-                    labelEl.style.opacity = '1';
-                }, 180);
+                    slides[prev].classList.remove('dsc-leaving');
+                }, EXIT_DUR);
+
+                /* 3. Enter new slide */
+                slides[next].classList.add('dsc-active');
+
+                /* 4. Update label */
+                if (labelEl) {
+                    labelEl.style.opacity = '0';
+                    setTimeout(function () {
+                        labelEl.textContent = LABELS[next];
+                        labelEl.style.opacity = '1';
+                    }, 180);
+                }
+
+                /* 5. Update nav dots + replay progress animation */
+                navDots.forEach(function (dot, i) {
+                    dot.classList.remove('dsc-nav-dot--active');
+                    dot.setAttribute('aria-selected', 'false');
+
+                    /* Force animation restart by removing and re-adding class */
+                    dot.style.animation = 'none';
+                    dot.offsetHeight; /* reflow */
+                    dot.style.animation = '';
+                });
+
+                navDots[next].classList.add('dsc-nav-dot--active');
+                navDots[next].setAttribute('aria-selected', 'true');
             }
 
-            /* 5. Update nav dots + replay progress animation */
+            /* ── Auto-rotation ── */
+            function next() {
+                goTo((current + 1) % slides.length);
+            }
+
+            function startTimer() {
+                clearInterval(timer);
+                timer = setInterval(next, INTERVAL);
+            }
+
+            function resetTimer() {
+                startTimer();
+            }
+
+            /* ── Nav dot click → manual jump ── */
             navDots.forEach(function (dot, i) {
-                dot.classList.remove('dsc-nav-dot--active');
-                dot.setAttribute('aria-selected', 'false');
+                dot.addEventListener('click', function () {
+                    if (i === current) return;
+                    goTo(i);
+                    resetTimer(); // restart 5-second cycle from now
+                });
 
-                /* Force animation restart by removing and re-adding class */
-                dot.style.animation = 'none';
-                dot.offsetHeight; /* reflow */
-                dot.style.animation = '';
+                /* Keyboard support */
+                dot.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        dot.click();
+                    }
+                });
             });
 
-            navDots[next].classList.add('dsc-nav-dot--active');
-            navDots[next].setAttribute('aria-selected', 'true');
-        }
+            /* ── Pause on hover / focus ── */
+            const visual = document.getElementById('hero-visual');
+            if (visual) {
+                visual.addEventListener('mouseenter', function () { clearInterval(timer); });
+                visual.addEventListener('mouseleave', function () { startTimer(); });
+                visual.addEventListener('focusin', function () { clearInterval(timer); });
+                visual.addEventListener('focusout', function () { startTimer(); });
+            }
 
-        /* ── Auto-rotation ── */
-        function next() {
-            goTo((current + 1) % slides.length);
-        }
-
-        function startTimer() {
-            clearInterval(timer);
-            timer = setInterval(next, INTERVAL);
-        }
-
-        function resetTimer() {
+            /* ── Kick off ── */
             startTimer();
-        }
-
-        /* ── Nav dot click → manual jump ── */
-        navDots.forEach(function (dot, i) {
-            dot.addEventListener('click', function () {
-                if (i === current) return;
-                goTo(i);
-                resetTimer(); // restart 5-second cycle from now
-            });
-
-            /* Keyboard support */
-            dot.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    dot.click();
-                }
-            });
-        });
-
-        /* ── Pause on hover / focus ── */
-        const visual = document.getElementById('hero-visual');
-        if (visual) {
-            visual.addEventListener('mouseenter', function () { clearInterval(timer); });
-            visual.addEventListener('mouseleave', function () { startTimer(); });
-            visual.addEventListener('focusin',    function () { clearInterval(timer); });
-            visual.addEventListener('focusout',   function () { startTimer(); });
-        }
-
-        /* ── Kick off ── */
-        startTimer();
-    })();
+        })();
     </script>
 
 </body>
