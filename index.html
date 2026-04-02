@@ -99,117 +99,166 @@
     <!-- ============================================ -->
     <!--               HERO SECTION                   -->
     <!-- ============================================ -->
-    <section id="hero" class="min-h-screen pt-20 flex flex-col lg:flex-row relative">
-        <!-- Left: Content -->
-        <div
-            class="w-full lg:w-1/2 bg-sapphire flex items-center px-6 sm:px-10 lg:px-16 py-16 lg:py-0 relative overflow-hidden">
-            <!-- BG Blurs -->
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute top-20 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-20 right-10 w-80 h-80 bg-blue-900/30 rounded-full blur-3xl"></div>
-            </div>
+    <section id="hero" class="hero-section relative overflow-hidden bg-sapphire">
 
-            <div class="relative z-10 max-w-xl">
-                <div
-                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/5 mb-8">
-                    <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
-                    <span class="text-gold text-xs font-semibold tracking-widest uppercase">Diseño Web Premium</span>
+        <!-- ── Ambient background blurs ── -->
+        <div class="hero-bg-blurs" aria-hidden="true">
+            <div class="hero-blur hero-blur-1"></div>
+            <div class="hero-blur hero-blur-2"></div>
+            <div class="hero-blur hero-blur-3"></div>
+        </div>
+
+        <!-- ── Grid noise overlay ── -->
+        <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+        <!-- ── Inner container ── -->
+        <div class="hero-container">
+
+            <!-- LEFT: Text content -->
+            <div class="hero-content" id="hero-text">
+
+                <!-- Badge -->
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span>Diseño Web Premium · Ecuador & LatAm</span>
                 </div>
 
-                <h1
-                    class="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold text-white leading-[1.1] mb-6">
-                    No hacemos solo páginas web.<br>
-                    <span class="text-gradient-gold">Creamos activos que captan clientes y proyectan autoridad.</span>
+                <!-- Headline -->
+                <h1 class="hero-headline">
+                    Tu marca merece una<br>
+                    <span class="hero-accent">presencia digital que convierte.</span>
                 </h1>
 
-                <p class="text-gray-400 text-base sm:text-lg mb-10 leading-relaxed max-w-md">
-                    Lanzamos tu marca digital con diseño web corporativo y optimización SEO. Desarrollo de alto rendimiento para empresas líderes.
+                <!-- Description -->
+                <p class="hero-desc">
+                    Diseñamos ecosistemas web corporativos con estrategia SEO y arquitectura de alto rendimiento para
+                    marcas que quieren liderar.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/593XXXXXXXXX"
-                        class="inline-flex items-center justify-center gap-2 bg-gradient-gold bg-gradient-gold-hover text-sapphire px-8 py-4 rounded-full font-bold text-sm shadow-gold hover:shadow-gold-lg transition-all transform hover:scale-105">
+                <!-- CTA Buttons -->
+                <div class="hero-ctas" id="hero-ctas">
+                    <a href="https://wa.me/593XXXXXXXXX" target="_blank" id="hero-cta-primary" class="hero-btn-primary">
                         Elevar mi negocio
-                        <i class="fas fa-arrow-right text-xs"></i>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#portafolio"
-                        class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-white hover:text-sapphire transition-all">
-                        <i class="fas fa-play text-xs"></i>
+                    <a href="#portafolio" id="hero-cta-secondary" class="hero-btn-secondary">
+                        <i class="fas fa-play"></i>
                         Ver Ecosistemas
                     </a>
                 </div>
-            </div>
-        </div>
 
-        <!-- Right: Device Mockups -->
-        <div
-            class="w-full lg:w-1/2 bg-gradient-to-br from-[#0f172a] to-[#020617] flex items-center justify-center px-6 lg:px-12 py-16 lg:py-0 relative overflow-hidden">
-            <!-- Badge -->
-            <div class="absolute top-6 right-6 lg:top-16 lg:right-10 z-20 floating-badge">
-                <div
-                    class="w-24 h-24 lg:w-28 lg:h-28 bg-gradient-gold rounded-full flex flex-col items-center justify-center shadow-gold-lg border-4 border-white">
-                    <span class="text-sapphire font-extrabold text-xl lg:text-2xl leading-none">100%</span>
-                    <span
-                        class="text-sapphire text-[10px] font-bold text-center leading-tight mt-0.5">SEO<br>Ready</span>
-                </div>
-            </div>
-
-            <!-- Devices -->
-            <div class="relative flex items-end justify-center gap-4 sm:gap-6 max-w-4xl w-full ml-auto lg:mr-4">
-                <!-- Laptop -->
-                <div class="device-shadow floating-badge floating-delay-1 relative z-10 flex-1 max-w-2xl">
-                    <div class="bg-sapphire rounded-t-2xl p-2 sm:p-3 lg:p-4">
-                        <div class="flex gap-1.5 mb-2 px-1">
-                            <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-red-500"></div>
-                            <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div
-                            class="aspect-video bg-white rounded-lg overflow-hidden flex items-center justify-center relative">
-                            <span class="absolute text-gray-500 font-bold text-sm tracking-widest uppercase z-0">Laptop
-                                Preview</span>
-                            <!-- Replace src below with assets/your-laptop-screenshot.png -->
-                            <img id="laptop-preview" src="imagenes/paginas-web-Quito.jpg"
-                                alt="Diseño de páginas web Ecuador - Proyecto Corporativo"
-                                class="w-full h-full object-contain relative z-10">
-                        </div>
+                <!-- Trust signals -->
+                <div class="hero-trust">
+                    <div class="hero-trust-item">
+                        <i class="fas fa-bolt text-gold text-xs"></i>
+                        <span>Entrega en &lt;10 días</span>
                     </div>
-                    <div class="h-3 lg:h-4 bg-gray-300 rounded-b-xl mx-6 lg:mx-8"></div>
-                    <div class="h-1.5 lg:h-2 bg-gray-400 rounded-b-lg mx-16 lg:mx-20"></div>
+                    <div class="hero-trust-sep"></div>
+                    <div class="hero-trust-item">
+                        <i class="fas fa-shield-halved text-gold text-xs"></i>
+                        <span>100% SEO Ready</span>
+                    </div>
+                    <div class="hero-trust-sep"></div>
+                    <div class="hero-trust-item">
+                        <i class="fas fa-star text-gold text-xs"></i>
+                        <span>Diseño Premium</span>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Tablet + Mobile -->
-                <div class="flex flex-col gap-4 sm:gap-6 pb-4 lg:pb-8">
-                    <div class="device-shadow floating-badge floating-delay-2 w-28 sm:w-40 lg:w-56">
-                        <div class="bg-sapphire rounded-2xl p-2 sm:p-3 border border-gray-700">
-                            <div
-                                class="aspect-[3/4] bg-white rounded-xl overflow-hidden flex items-center justify-center relative">
-                                <span
-                                    class="absolute text-gray-400 font-bold text-[10px] tracking-widest uppercase z-0 rotate-90 sm:rotate-0">Tablet<br
-                                        class="hidden sm:block">Preview</span>
-                                <!-- Replace src below with assets/your-tablet-screenshot.png -->
-                                <img id="tablet-preview" src="imagenes/diseño-web-ecuador.jpg"
-                                    alt="Posicionamiento SEO Ecuador - Vista Tablet"
-                                    class="w-full h-full object-contain relative z-10">
+            <!-- RIGHT: Dynamic device showcase -->
+            <div class="hero-visual" id="hero-visual" aria-hidden="true">
+
+                <!-- Ambient glow -->
+                <div class="dsc-glow" aria-hidden="true"></div>
+
+                <!-- ══ Device Showcase Wrapper ══ -->
+                <div class="dsc-wrap" id="dsc-wrap">
+
+                    <!-- ── SLIDE 1: Desktop / Browser ── -->
+                    <div class="dsc-slide dsc-slide--desktop dsc-active" data-device="desktop">
+                        <div class="dsc-browser">
+                            <!-- Chrome bar -->
+                            <div class="dsc-browser-bar">
+                                <div class="dsc-dots">
+                                    <span class="dsc-dot dsc-dot--r"></span>
+                                    <span class="dsc-dot dsc-dot--y"></span>
+                                    <span class="dsc-dot dsc-dot--g"></span>
+                                </div>
+                                <div class="dsc-url">
+                                    <i class="fas fa-lock"></i>
+                                    jpelevate.studio
+                                </div>
+                            </div>
+                            <!-- Viewport -->
+                            <div class="dsc-viewport dsc-viewport--desktop">
+                                <img src="imagenes/paginas-web-Quito.jpg"
+                                     alt="Vista de escritorio — Diseño web corporativo Ecuador"
+                                     class="dsc-img"
+                                     loading="eager">
+                                <div class="dsc-glare"></div>
+                            </div>
+                            <!-- Laptop stand -->
+                            <div class="dsc-stand">
+                                <div class="dsc-stand-neck"></div>
+                                <div class="dsc-stand-base"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="device-shadow floating-badge floating-delay-3 w-16 sm:w-24 lg:w-32 ml-auto">
-                        <div class="bg-sapphire rounded-2xl p-1.5 sm:p-2 border border-gray-700 relative">
-                            <div
-                                class="aspect-[9/16] bg-white rounded-xl overflow-hidden flex items-center justify-center relative">
-                                <span
-                                    class="absolute text-gray-400 font-bold text-[8px] tracking-widest uppercase z-0 rotate-90 sm:rotate-0 text-center">Mobile<br
-                                        class="hidden sm:block">Preview</span>
-                                <!-- Replace src below with assets/your-mobile-screenshot.png -->
-                                <img id="mobile-preview" src="imagenes/desarrollo-web-ecuador.jpg"
-                                    alt="Desarrollo web Ecuador - Vista Móvil"
-                                    class="w-full h-full object-contain relative z-10">
+
+                    <!-- ── SLIDE 2: Tablet ── -->
+                    <div class="dsc-slide dsc-slide--tablet" data-device="tablet">
+                        <div class="dsc-tablet">
+                            <div class="dsc-tablet-frame">
+                                <div class="dsc-tablet-cam"></div>
+                                <div class="dsc-viewport dsc-viewport--tablet">
+                                    <img src="imagenes/diseño-web-ecuador.jpg"
+                                         alt="Vista tablet — Diseño web responsivo Ecuador"
+                                         class="dsc-img"
+                                         loading="eager">
+                                    <div class="dsc-glare"></div>
+                                </div>
+                                <div class="dsc-tablet-home"></div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- ── SLIDE 3: Mobile phone ── -->
+                    <div class="dsc-slide dsc-slide--phone" data-device="phone">
+                        <div class="dsc-phone">
+                            <div class="dsc-phone-frame">
+                                <div class="dsc-phone-island"></div>
+                                <div class="dsc-viewport dsc-viewport--phone">
+                                    <img src="imagenes/desarrollo-web-ecuador.jpg"
+                                         alt="Vista móvil — Desarrollo web Ecuador"
+                                         class="dsc-img"
+                                         loading="eager">
+                                    <div class="dsc-glare"></div>
+                                </div>
+                                <div class="dsc-phone-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.dsc-wrap -->
+
+                <!-- View label -->
+                <div class="dsc-label-wrap" id="dsc-label">
+                    <span class="dsc-label-dot"></span>
+                    <span class="dsc-label-text" id="dsc-label-text">Vista de Escritorio</span>
                 </div>
-            </div>
+
+                <!-- Navigation dots -->
+                <div class="dsc-nav" id="dsc-nav" role="tablist" aria-label="Seleccionar dispositivo">
+                    <button class="dsc-nav-dot dsc-nav-dot--active" data-index="0"
+                            role="tab" aria-selected="true" aria-label="Vista de Escritorio"></button>
+                    <button class="dsc-nav-dot" data-index="1"
+                            role="tab" aria-selected="false" aria-label="Vista Tablet"></button>
+                    <button class="dsc-nav-dot" data-index="2"
+                            role="tab" aria-selected="false" aria-label="Vista Móvil"></button>
+                </div>
+
+            </div><!-- /.hero-visual -->
         </div>
     </section>
 
@@ -230,7 +279,8 @@
                 <h2 class="text-4xl lg:text-6xl font-extrabold text-white mb-6">Un Estándar Superior</h2>
                 <div class="glow-line w-32 mx-auto mb-8"></div>
                 <p class="text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-                    Nuestra metodología combina diseño elegante con ingeniería avanzada. Construimos ecosistemas web que proyectan confianza, mejoran tu presencia en Google y cierran ventas por WhatsApp.
+                    Nuestra metodología combina diseño elegante con ingeniería avanzada. Construimos ecosistemas web que
+                    proyectan confianza, mejoran tu presencia en Google y cierran ventas por WhatsApp.
                 </p>
             </div>
 
@@ -241,7 +291,8 @@
                         <i class="fas fa-bolt text-3xl text-gold"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Ejecución Profesional</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Proceso remoto y ágil orientado a empresas. Tu ecosistema digital entregado con estándares corporativos en menos de 10 días, sin demoras.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Proceso remoto y ágil orientado a empresas. Tu
+                        ecosistema digital entregado con estándares corporativos en menos de 10 días, sin demoras.</p>
                 </div>
                 <div class="text-center group">
                     <div
@@ -249,7 +300,8 @@
                         <i class="fas fa-tablet-screen-button text-3xl text-gold"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Diseño Premium Responsivo</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Construimos la página web de tu negocio para reflejar máxima autoridad y lujo en cualquier pantalla, reteniendo visitas más tiempo.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Construimos la página web de tu negocio para
+                        reflejar máxima autoridad y lujo en cualquier pantalla, reteniendo visitas más tiempo.</p>
                 </div>
                 <div class="text-center group">
                     <div
@@ -257,7 +309,8 @@
                         <i class="fas fa-network-wired text-3xl text-gold"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Estrategia SEO + GEO</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Creamos tu marca lista para rankear orgánicamente y preparada para ser referenciada por nuevas inteligencias artificiales comerciales.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Creamos tu marca lista para rankear orgánicamente y
+                        preparada para ser referenciada por nuevas inteligencias artificiales comerciales.</p>
                 </div>
             </div>
         </div>
@@ -275,13 +328,13 @@
                     title="agencia de diseño web">
                     SEO, Visibilidad y Conversión
                 </span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold text-sapphire mb-4"
-                    title="desarrollo web corporativo">
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-sapphire mb-4" title="desarrollo web corporativo">
                     Estructuras digitales diseñadas para posicionar y convertir
                 </h2>
                 <div class="w-24 h-1 bg-gold mx-auto rounded-full mb-6"></div>
                 <p class="text-gray-600 max-w-2xl mx-auto text-lg" title="posicionamiento web en Ecuador">
-                    No se trata solo de diseño. Construimos activos digitales orientados a mejorar tu visibilidad en Google, reforzar la autoridad de tu marca y transformar visitas en oportunidades reales de negocio.
+                    No se trata solo de diseño. Construimos activos digitales orientados a mejorar tu visibilidad en
+                    Google, reforzar la autoridad de tu marca y transformar visitas en oportunidades reales de negocio.
                 </p>
             </div>
 
@@ -311,8 +364,11 @@
                         <h3
                             class="text-white text-2xl lg:text-3xl font-extrabold mb-4 group-hover:text-gold transition-colors leading-tight">
                             Arquitectura Web orientada al posicionamiento</h3>
-                        <p class="text-gray-400 text-sm lg:text-base leading-relaxed" title="creación de páginas web profesionales">
-                            Desarrollamos plataformas con estructura estratégica, enfoque corporativo y jerarquía clara para potenciar tu presencia digital, fortalecer la confianza del usuario y acelerar el posicionamiento orgánico.
+                        <p class="text-gray-400 text-sm lg:text-base leading-relaxed"
+                            title="creación de páginas web profesionales">
+                            Desarrollamos plataformas con estructura estratégica, enfoque corporativo y jerarquía clara
+                            para potenciar tu presencia digital, fortalecer la confianza del usuario y acelerar el
+                            posicionamiento orgánico.
                         </p>
                     </div>
                 </div>
@@ -340,9 +396,10 @@
                         <h3
                             class="text-white text-2xl lg:text-3xl font-extrabold mb-4 group-hover:text-gold transition-colors leading-tight">
                             Flujos de Captación por WhatsApp</h3>
-                        <p class="text-gray-400 text-sm lg:text-base leading-relaxed"
-                            title="páginas web para negocios">
-                            Integramos llamados a la acción comerciales para eliminar fricciones y transformar visitas en conversaciones directas, facilitando que un prospecto pase de evaluar tu marca a contactarte en segundos.
+                        <p class="text-gray-400 text-sm lg:text-base leading-relaxed" title="páginas web para negocios">
+                            Integramos llamados a la acción comerciales para eliminar fricciones y transformar visitas
+                            en conversaciones directas, facilitando que un prospecto pase de evaluar tu marca a
+                            contactarte en segundos.
                         </p>
                     </div>
                 </div>
@@ -385,7 +442,8 @@
                 <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-4">Adaptabilidad Corporativa</h2>
                 <div class="glow-line w-32 mx-auto mb-6"></div>
                 <p class="text-gray-400 max-w-xl mx-auto">
-                    Soluciones tecnológicas y estéticas desarrolladas específicamente para potenciar la rentabilidad de cada modelo de negocio.
+                    Soluciones tecnológicas y estéticas desarrolladas específicamente para potenciar la rentabilidad de
+                    cada modelo de negocio.
                 </p>
             </div>
 
@@ -405,10 +463,12 @@
                         <!-- Info -->
                         <div>
                             <h3 class="text-white text-xl font-bold mb-1">Empresas Corporativas y Firmas</h3>
-                            <p class="text-gold text-sm font-semibold mb-2" title="diseño web para abogados">Diseño web para abogados, consultorías y holdings</p>
+                            <p class="text-gold text-sm font-semibold mb-2" title="diseño web para abogados">Diseño web
+                                para abogados, consultorías y holdings</p>
                             <p
                                 class="text-gray-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity">
-                                Portales institucionales que proyectan prestigio, exclusividad y seguridad para un público de alto nivel adquisitivo.
+                                Portales institucionales que proyectan prestigio, exclusividad y seguridad para un
+                                público de alto nivel adquisitivo.
                             </p>
                         </div>
                     </div>
@@ -428,10 +488,12 @@
                         <!-- Info -->
                         <div>
                             <h3 class="text-white text-xl font-bold mb-1">Clínicas y Servicios de Salud</h3>
-                            <p class="text-gold text-sm font-semibold mb-2" title="diseño web para clínicas">Diseño web para médicos y especialistas en Daule y Quito</p>
+                            <p class="text-gold text-sm font-semibold mb-2" title="diseño web para clínicas">Diseño web
+                                para médicos y especialistas en Daule y Quito</p>
                             <p
                                 class="text-gray-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity">
-                                Interfaces limpias, agendamiento simplificado y refuerzo de autoridad académica y tecnológica en el sector médico.
+                                Interfaces limpias, agendamiento simplificado y refuerzo de autoridad académica y
+                                tecnológica en el sector médico.
                             </p>
                         </div>
                     </div>
@@ -452,10 +514,12 @@
                         <!-- Info -->
                         <div>
                             <h3 class="text-white text-xl font-bold mb-1">Desarrollo Inmobiliario y Constructoras</h3>
-                            <p class="text-gold text-sm font-semibold mb-2" title="diseño web para constructoras">Diseño web para constructoras y desarrolladoras en Cuenca</p>
+                            <p class="text-gold text-sm font-semibold mb-2" title="diseño web para constructoras">Diseño
+                                web para constructoras y desarrolladoras en Cuenca</p>
                             <p
                                 class="text-gray-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity">
-                                Ecosistemas visuales inmersivos enfocados en captación de inversores y compradores mediante exposición de portafolio premium.
+                                Ecosistemas visuales inmersivos enfocados en captación de inversores y compradores
+                                mediante exposición de portafolio premium.
                             </p>
                         </div>
                     </div>
@@ -597,14 +661,18 @@
                 <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                     <button
                         class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
-                        <span class="font-bold text-sapphire pr-4">¿Las páginas web incluyen optimización SEO desde el inicio?</span>
+                        <span class="font-bold text-sapphire pr-4">¿Las páginas web incluyen optimización SEO desde el
+                            inicio?</span>
                         <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
                         </div>
                     </button>
                     <div class="accordion-content px-6">
                         <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                            Sí. Entendemos que de nada sirve un portal hermoso si nadie lo visita. Por eso, implementamos técnicas SEO (Search Engine Optimization) desde la base del código. Empleamos buenas prácticas de velocidad, marcado semántico y arquitectura de la información para aumentar tus probabilidades de indexar correctamente en Google de forma sólida.
+                            Sí. Entendemos que de nada sirve un portal hermoso si nadie lo visita. Por eso,
+                            implementamos técnicas SEO (Search Engine Optimization) desde la base del código. Empleamos
+                            buenas prácticas de velocidad, marcado semántico y arquitectura de la información para
+                            aumentar tus probabilidades de indexar correctamente en Google de forma sólida.
                         </p>
                     </div>
                 </div>
@@ -613,14 +681,18 @@
                 <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                     <button
                         class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
-                        <span class="font-bold text-sapphire pr-4">He escuchado sobre GEO para IA. ¿Lo aplican en mi sitio?</span>
+                        <span class="font-bold text-sapphire pr-4">He escuchado sobre GEO para IA. ¿Lo aplican en mi
+                            sitio?</span>
                         <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
                         </div>
                     </button>
                     <div class="accordion-content px-6">
                         <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                            Definitivamente. El GEO (Generative Engine Optimization) es el siguiente paso del SEO. Mediante estructuras de información claras y formatos legibles para inteligencias artificiales (como los motores de ChatGPT y Gemini), preparamos tu ecosistema web para que los asistentes virtuales puedan procesar y recomendar tu negocio a sus usuarios.
+                            Definitivamente. El GEO (Generative Engine Optimization) es el siguiente paso del SEO.
+                            Mediante estructuras de información claras y formatos legibles para inteligencias
+                            artificiales (como los motores de ChatGPT y Gemini), preparamos tu ecosistema web para que
+                            los asistentes virtuales puedan procesar y recomendar tu negocio a sus usuarios.
                         </p>
                     </div>
                 </div>
@@ -629,14 +701,18 @@
                 <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                     <button
                         class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
-                        <span class="font-bold text-sapphire pr-4">¿Debo ir a una oficina física para avanzar mi proyecto?</span>
+                        <span class="font-bold text-sapphire pr-4">¿Debo ir a una oficina física para avanzar mi
+                            proyecto?</span>
                         <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
                         </div>
                     </button>
                     <div class="accordion-content px-6">
                         <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                            En absoluto. Operamos de forma 100% remota y ágil bajo metodología internacional. Todo nuestro acompañamiento comercial, revisión de entregables y consultoría estratégica se maneja vía videoconferencias y comunicación directa, brindándote mayor rapidez y quitándote problemas innecesarios de traslados físicos.
+                            En absoluto. Operamos de forma 100% remota y ágil bajo metodología internacional. Todo
+                            nuestro acompañamiento comercial, revisión de entregables y consultoría estratégica se
+                            maneja vía videoconferencias y comunicación directa, brindándote mayor rapidez y quitándote
+                            problemas innecesarios de traslados físicos.
                         </p>
                     </div>
                 </div>
@@ -645,14 +721,18 @@
                 <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                     <button
                         class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50/50 transition-colors">
-                        <span class="font-bold text-sapphire pr-4">¿El desarrollo realmente está listo en menos de 10 días?</span>
+                        <span class="font-bold text-sapphire pr-4">¿El desarrollo realmente está listo en menos de 10
+                            días?</span>
                         <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-chevron-down text-gold text-sm transition-transform duration-300"></i>
                         </div>
                     </button>
                     <div class="accordion-content px-6">
                         <p class="pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                            Sí. Contamos con procesos rigurosamente estandarizados que nos permiten construir, validar y desplegar activos digitales funcionales en tiempos cortos. Una vez que poseemos todo el contenido de tu parte, nuestro equipo entra en una fase intensiva de desarrollo para entregarte una plataforma premium lista para convertir.
+                            Sí. Contamos con procesos rigurosamente estandarizados que nos permiten construir, validar y
+                            desplegar activos digitales funcionales en tiempos cortos. Una vez que poseemos todo el
+                            contenido de tu parte, nuestro equipo entra en una fase intensiva de desarrollo para
+                            entregarte una plataforma premium lista para convertir.
                         </p>
                     </div>
                 </div>
@@ -730,6 +810,116 @@
     <!--               JAVASCRIPT                     -->
     <!-- ============================================ -->
     <script src="js/main.js"></script>
+
+    <!-- ============================================ -->
+    <!--       DEVICE SHOWCASE — AUTO CYCLE JS        -->
+    <!-- ============================================ -->
+    <script>
+    (function () {
+        'use strict';
+
+        /* ── Config ── */
+        const INTERVAL   = 5000;   // ms between switches
+        const EXIT_DUR   = 450;    // ms — matches CSS transition duration
+        const LABELS     = ['Vista de Escritorio', 'Vista Tablet', 'Vista Móvil'];
+
+        /* ── DOM refs ── */
+        const slides    = document.querySelectorAll('.dsc-slide');
+        const navDots   = document.querySelectorAll('.dsc-nav-dot');
+        const labelEl   = document.getElementById('dsc-label-text');
+
+        if (!slides.length || !navDots.length) return; // guard
+
+        let current  = 0;
+        let timer    = null;
+        let paused   = false;
+
+        /* ── Core: go to slide index ── */
+        function goTo(next) {
+            if (next === current) return;
+            const prev = current;
+            current = next;
+
+            /* 1. Exit old slide */
+            slides[prev].classList.remove('dsc-active');
+            slides[prev].classList.add('dsc-leaving');
+
+            /* 2. Clean up leaving class after animation */
+            setTimeout(function () {
+                slides[prev].classList.remove('dsc-leaving');
+            }, EXIT_DUR);
+
+            /* 3. Enter new slide */
+            slides[next].classList.add('dsc-active');
+
+            /* 4. Update label */
+            if (labelEl) {
+                labelEl.style.opacity = '0';
+                setTimeout(function () {
+                    labelEl.textContent = LABELS[next];
+                    labelEl.style.opacity = '1';
+                }, 180);
+            }
+
+            /* 5. Update nav dots + replay progress animation */
+            navDots.forEach(function (dot, i) {
+                dot.classList.remove('dsc-nav-dot--active');
+                dot.setAttribute('aria-selected', 'false');
+
+                /* Force animation restart by removing and re-adding class */
+                dot.style.animation = 'none';
+                dot.offsetHeight; /* reflow */
+                dot.style.animation = '';
+            });
+
+            navDots[next].classList.add('dsc-nav-dot--active');
+            navDots[next].setAttribute('aria-selected', 'true');
+        }
+
+        /* ── Auto-rotation ── */
+        function next() {
+            goTo((current + 1) % slides.length);
+        }
+
+        function startTimer() {
+            clearInterval(timer);
+            timer = setInterval(next, INTERVAL);
+        }
+
+        function resetTimer() {
+            startTimer();
+        }
+
+        /* ── Nav dot click → manual jump ── */
+        navDots.forEach(function (dot, i) {
+            dot.addEventListener('click', function () {
+                if (i === current) return;
+                goTo(i);
+                resetTimer(); // restart 5-second cycle from now
+            });
+
+            /* Keyboard support */
+            dot.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    dot.click();
+                }
+            });
+        });
+
+        /* ── Pause on hover / focus ── */
+        const visual = document.getElementById('hero-visual');
+        if (visual) {
+            visual.addEventListener('mouseenter', function () { clearInterval(timer); });
+            visual.addEventListener('mouseleave', function () { startTimer(); });
+            visual.addEventListener('focusin',    function () { clearInterval(timer); });
+            visual.addEventListener('focusout',   function () { startTimer(); });
+        }
+
+        /* ── Kick off ── */
+        startTimer();
+    })();
+    </script>
 
 </body>
 
