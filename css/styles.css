@@ -1102,3 +1102,127 @@ html {
         height: 480px;
     }
 }
+
+/* ============================================================
+   MOBILE OVERRIDES  (@media max-width: 768px)
+   Targets Tailwind utility classes and custom classes alike.
+   Uses !important where needed to override Tailwind CDN output.
+   ============================================================ */
+@media (max-width: 768px) {
+
+    /* ── 1. SECTION HEADING SIZES ──────────────────────────
+       h2 headings in sections: text-4xl / text-5xl / text-6xl
+       cap at 1.75rem (≈28px) with tight line-height
+    ──────────────────────────────────────────────────────── */
+    section h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.01em !important;
+    }
+
+    section h3 {
+        font-size: 1.1rem !important;
+        line-height: 1.25 !important;
+    }
+
+    /* Section sub-labels (yellow uppercase text above headings) */
+    section .text-xs.tracking-widest {
+        font-size: 0.6rem !important;
+        letter-spacing: 0.18em !important;
+    }
+
+    /* Section lead paragraphs */
+    section .text-lg,
+    section .text-xl {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+    }
+
+    /* ── 2. SECTION VERTICAL SPACING ──────────────────────
+       py-24 = 6rem top+bottom → cut to 3rem
+       mb-16 / mb-20 → cut to 2rem
+    ──────────────────────────────────────────────────────── */
+
+    /* Sections using Tailwind py-24 / py-36 */
+    #manifiesto,
+    #portafolio,
+    #casos,
+    #planes,
+    #faq {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    /* Large bottom margins on section header blocks */
+    .mb-16 { margin-bottom: 2rem !important; }
+    .mb-20 { margin-bottom: 2rem !important; }
+
+    /* Glow-line accent decoration gap */
+    .mb-8  { margin-bottom: 1rem !important; }
+    .mb-6  { margin-bottom: 0.75rem !important; }
+
+    /* ── 3. CARD CONTAINERS — WIDTH & PADDING ────────────
+       Plans cards (p-8), portfolio text cards (p-8 lg:p-10)
+       → width: 92% centred, padding halved to 1.25–1.5rem
+    ──────────────────────────────────────────────────────── */
+
+    /* Pricing plan cards */
+    #planes .grid > div {
+        width: 92% !important;
+        max-width: 92% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 1.5rem !important;
+        /* cancel the featured card's desktop -translate-y offset */
+        transform: none !important;
+    }
+
+    /* Portfolio / SEO section text cards */
+    #portafolio .rounded-\[2rem\] > div[class*="p-"] {
+        padding: 1.25rem !important;
+    }
+
+    /* Manifiesto feature item icon boxes */
+    #manifiesto .w-20 {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* FAQ accordion items */
+    #faq .accordion-btn {
+        padding: 0.9rem 1rem !important;
+    }
+
+    /* ── 4. GRID / FLEX GAPS ─────────────────────────────
+       gap-8 / gap-12 → 1rem on mobile
+    ──────────────────────────────────────────────────────── */
+    #manifiesto .grid,
+    #portafolio .grid,
+    #casos .grid,
+    #planes .grid {
+        gap: 1rem !important;
+    }
+
+    /* ── 5. PRICE FIGURES — slightly smaller on mobile ───
+       text-4xl ($200/$450) and text-5xl ($350) price tags
+    ──────────────────────────────────────────────────────── */
+    #planes .text-4xl { font-size: 2rem !important; }
+    #planes .text-5xl { font-size: 2.25rem !important; }
+
+    /* ── 6. VIDEO / PORTFOLIO CARDS ──────────────────────
+       Keep some padding in the bottom text block
+    ──────────────────────────────────────────────────────── */
+    #portafolio [class*="p-8"],
+    #portafolio [class*="p-10"] {
+        padding: 1.25rem !important;
+    }
+
+    /* ── 7. CONTAINER HORIZONTAL PADDING ─────────────────
+       px-6 → px-4 so cards feel wider on narrow screens
+    ──────────────────────────────────────────────────────── */
+    section .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
