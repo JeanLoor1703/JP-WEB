@@ -269,7 +269,8 @@ html {
    ============================================ */
 
 .hero-section {
-    min-height: 100svh;
+    /* Mobile: auto height — just wraps its content */
+    min-height: auto;
     padding-top: 80px;
     display: flex;
     flex-direction: column;
@@ -337,13 +338,14 @@ html {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2.5rem 1.5rem 3rem;
+    /* Mobile: compact vertical padding */
+    padding: 1.5rem 1.25rem 2rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: flex-start;
+    gap: 1.25rem;
 }
 
 /* ── Left: text content ── */
@@ -402,12 +404,13 @@ html {
 /* Headline */
 .hero-headline {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2rem, 6vw, 3.8rem);
+    /* Tighter on mobile: starts smaller to fit phone screens cleanly */
+    font-size: clamp(1.65rem, 7.5vw, 3.8rem);
     font-weight: 800;
     color: #fff;
-    line-height: 1.2;
-    letter-spacing: -.025em;
-    margin: 0 0 1.25rem;
+    line-height: 1.18;
+    letter-spacing: -.02em;
+    margin: 0 0 .85rem;
 }
 
 .hero-accent {
@@ -421,19 +424,19 @@ html {
 /* Description */
 .hero-desc {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(.8rem, 1.7vw, 1rem);
+    font-size: clamp(.82rem, 3.8vw, 1rem);
     color: rgba(255, 255, 255, .52);
-    line-height: 1.68;
+    line-height: 1.6;
     max-width: 44ch;
-    margin: 0 0 1.75rem;
+    margin: 0 0 1.1rem;
 }
 
 /* CTA buttons */
 .hero-ctas {
     display: flex;
     flex-wrap: wrap;
-    gap: .75rem;
-    margin-bottom: 2rem;
+    gap: .65rem;
+    margin-bottom: 1rem;
 }
 
 .hero-btn-primary {
@@ -532,8 +535,9 @@ html {
 .hero-visual {
     position: relative;
     width: 100%;
-    /* Fixed height on mobile to prevent layout jumps */
-    height: 280px;
+    /* Compact fixed height on mobile — clips overflow cleanly */
+    height: 230px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
