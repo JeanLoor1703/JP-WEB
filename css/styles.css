@@ -997,6 +997,7 @@ html {
         padding-top: 3rem;
         padding-bottom: 3rem;
         min-height: calc(100svh - 90px);
+        max-height: 900px;
     }
 
     .hero-content {
