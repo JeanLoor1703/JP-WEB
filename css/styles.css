@@ -270,7 +270,7 @@ html {
 
 .hero-section {
     min-height: 100svh;
-    padding-top: 72px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -337,13 +337,13 @@ html {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 1.75rem 1.5rem 1.5rem;
+    padding: 2.5rem 1.5rem 3rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 /* ── Left: text content ── */
@@ -402,12 +402,12 @@ html {
 /* Headline */
 .hero-headline {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.75rem, 5vw, 3.2rem);
+    font-size: clamp(2rem, 6vw, 3.8rem);
     font-weight: 800;
     color: #fff;
-    line-height: 1.1;
+    line-height: 1.2;
     letter-spacing: -.025em;
-    margin: 0 0 .75rem;
+    margin: 0 0 1.25rem;
 }
 
 .hero-accent {
@@ -415,6 +415,7 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-size: 1.05em;
 }
 
 /* Description */
@@ -424,7 +425,7 @@ html {
     color: rgba(255, 255, 255, .52);
     line-height: 1.68;
     max-width: 44ch;
-    margin: 0 0 1.1rem;
+    margin: 0 0 1.75rem;
 }
 
 /* CTA buttons */
@@ -432,7 +433,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     gap: .75rem;
-    margin-bottom: 1.1rem;
+    margin-bottom: 2rem;
 }
 
 .hero-btn-primary {
@@ -520,18 +521,37 @@ html {
    DEVICE SHOWCASE — RIGHT COLUMN
    ============================================ */
 
-/* Outer wrapper — fixed height on mobile so CTAs never shift */
+/* ─────────────────────────────────────────────────────
+   DEVICE SHOWCASE — RIGHT COLUMN
+   .hero-visual is a column-flex container:
+     ① .dsc-glow   — absolute decorative blur (no flow impact)
+     ② .dsc-wrap   — fills remaining height; holds absolutely-positioned slides centred
+     ③ .dsc-label-wrap — in-flow, sits below the wrap
+     ④ .dsc-nav    — in-flow, sits below the label
+───────────────────────────────────────────────────── */
 .hero-visual {
     position: relative;
     width: 100%;
-    height: 220px;
-    max-height: 220px;
-    overflow: hidden;
+    /* Fixed height on mobile to prevent layout jumps */
+    height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    gap: 0;
     animation: heroSlideRight .65s cubic-bezier(.22, .61, .36, 1) both .2s;
+}
+
+/* The showcase wrapper fills the column; slides centre inside it */
+.dsc-wrap {
+    position: relative;
+    width: 100%;
+    flex: 1;           /* fill available height in .hero-visual */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: visible; /* let the device float animation peek out */
 }
 
 /* Ambient glow behind all devices */
@@ -567,32 +587,23 @@ html {
     }
 }
 
-/* ── Showcase wrapper — all slides stack here ── */
-.dsc-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    z-index: 1;
-}
+
 
 /* ─────────────────────────────────
    SLIDES — base state
 ───────────────────────────────── */
 .dsc-slide {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%) translateY(14px);
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
     /* Hidden: fade + slide down */
     opacity: 0;
-    transform: translateX(-50%) translateY(14px);
     pointer-events: none;
     transition:
         opacity .45s cubic-bezier(.4, 0, .2, 1),
@@ -603,14 +614,14 @@ html {
 /* Active slide — fully visible and in place */
 .dsc-slide.dsc-active {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translate(-50%, -50%) translateY(0);
     pointer-events: auto;
 }
 
 /* Outgoing slide — fade + slide up */
 .dsc-slide.dsc-leaving {
     opacity: 0;
-    transform: translateX(-50%) translateY(-10px);
+    transform: translate(-50%, -50%) translateY(-10px);
     pointer-events: none;
 }
 
@@ -830,13 +841,9 @@ html {
 }
 
 /* ─────────────────────────────────
-   VIEW LABEL
+   VIEW LABEL  (in-flow, below dsc-wrap)
 ───────────────────────────────── */
 .dsc-label-wrap {
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
     display: inline-flex;
     align-items: center;
     gap: .35rem;
@@ -845,6 +852,8 @@ html {
     border: 1px solid rgba(212, 175, 55, .22);
     border-radius: 9999px;
     padding: 3px 10px 3px 8px;
+    margin-top: .55rem;
+    flex-shrink: 0;
     z-index: 10;
 }
 
@@ -869,15 +878,13 @@ html {
 }
 
 /* ─────────────────────────────────
-   NAV DOTS
+   NAV DOTS  (in-flow, below label)
 ───────────────────────────────── */
 .dsc-nav {
-    position: absolute;
-    bottom: -22px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     gap: 6px;
+    margin-top: .4rem;
+    flex-shrink: 0;
     z-index: 10;
 }
 
@@ -974,49 +981,58 @@ html {
 @media (min-width: 1024px) {
 
     .hero-section {
-        padding-top: 80px;
+        padding-top: 90px;
+        padding-bottom: 0;
     }
 
     .hero-container {
         flex-direction: row;
-        align-items: center;
+        align-items: stretch;   /* both columns fill the row height */
         justify-content: space-between;
-        gap: 3rem;
-        padding-top: 0;
-        padding-bottom: 0;
+        gap: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        min-height: calc(100svh - 90px);
     }
 
     .hero-content {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 52%;
+        max-width: 52%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* vertically centre text within stretched row */
     }
 
+    /* Right column stretches with the row; its internal flex centres the slides */
     .hero-visual {
-        flex: 0 0 46%;
-        max-width: 46%;
-        height: auto;
+        flex: 1;
+        height: auto;           /* override mobile fixed height */
         max-height: none;
-        min-height: 360px;
-        overflow: visible;
         justify-content: center;
-        padding-bottom: 2.5rem;
-        margin-top: 3.5rem; /* Alinea visualmente el centro de los dispositivos con el centro del texto */
-        /* room for nav dots + label */
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Give the slide wrapper enough room on desktop */
+    .dsc-wrap {
+        min-height: 380px;
     }
 
     /* Typography scale-up */
     .hero-headline {
-        font-size: clamp(2.2rem, 3vw, 3.4rem);
-        margin-bottom: 1rem;
+        font-size: clamp(2.5rem, 3.5vw, 4.2rem);
+        margin-bottom: 1.5rem;
+        line-height: 1.15;
     }
 
     .hero-desc {
-        font-size: 1.05rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
 
     .hero-ctas {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .hero-btn-primary,
@@ -1069,14 +1085,7 @@ html {
         height: 7px;
     }
 
-    /* Label repositioned above nav */
-    .dsc-label-wrap {
-        bottom: 28px;
-    }
-
-    .dsc-nav {
-        bottom: 8px;
-    }
+    /* Label and nav dots already in flow — no position overrides needed on desktop */
 
     .dsc-nav-dot {
         width: 36px;
