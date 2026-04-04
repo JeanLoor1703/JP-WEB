@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -342,7 +342,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.75rem;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 /* ── Left: text content ── */
@@ -999,6 +1000,7 @@ html {
         overflow: visible;
         justify-content: center;
         padding-bottom: 2.5rem;
+        margin-top: 3.5rem; /* Alinea visualmente el centro de los dispositivos con el centro del texto */
         /* room for nav dots + label */
     }
 

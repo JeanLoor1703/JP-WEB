@@ -40,8 +40,8 @@
             <!-- Logo -->
             <a href="#" class="flex items-center gap-3 group">
                 <!-- Logo Image -->
-                <img src="imagenes/logo-Web.png" alt="JP Elevate Studio"
-                    class="h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 invert brightness-0 drop-shadow-lg">
+                <img src="imagenes/logo-JP-Web.png" alt="JP Elevate Studio"
+                    class="h-16 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 invert brightness-0 drop-shadow-lg">
                 <!-- Texto al lado -->
                 <div class="flex flex-col justify-center">
                     <span
@@ -746,7 +746,7 @@
                 <div class="flex flex-col items-center md:items-start text-center md:text-left">
                     <a href="#" class="flex items-center gap-3 mb-3 group">
                         <img src="imagenes/logo-Web.png" alt="JP Elevate Studio"
-                            class="h-12 md:h-16 w-auto object-contain invert brightness-0 drop-shadow-lg transition-transform group-hover:scale-105">
+                            class="h-16 md:h-20 w-auto object-contain invert brightness-0 drop-shadow-lg transition-transform group-hover:scale-105">
                         <div class="flex flex-col text-left">
                             <span
                                 class="text-white font-montserrat font-extrabold text-[1.1rem] lg:text-xl tracking-wide leading-none mb-1">
@@ -903,14 +903,8 @@
                 });
             });
 
-            /* ── Pause on hover / focus ── */
-            const visual = document.getElementById('hero-visual');
-            if (visual) {
-                visual.addEventListener('mouseenter', function () { clearInterval(timer); });
-                visual.addEventListener('mouseleave', function () { startTimer(); });
-                visual.addEventListener('focusin', function () { clearInterval(timer); });
-                visual.addEventListener('focusout', function () { startTimer(); });
-            }
+            /* Hover pausa eliminada para evitar desincronización con la animación CSS de la barra */
+            /* Se mantiene el slider corriendo fluidamente cada 5 segundos. */
 
             /* ── Kick off ── */
             startTimer();
